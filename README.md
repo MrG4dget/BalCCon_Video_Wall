@@ -56,6 +56,8 @@ You might need to use two zipties in the front to connect the two layers with ea
 
 Once the wall stands, attach the LEDs in the back. Be sure, to mount them correctly as shown in the following image:
 
+![](media/LED_layout.jpg)
+
 
 
 
