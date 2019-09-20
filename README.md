@@ -1,5 +1,7 @@
 # BalcCon_Video_Wall
 
+![BalcCon Wall](media/wall_gif.gif)
+
 First built at the BalcCon2k17 conference in Novi Sad, Serbia, this project is meant to be as easy to build as possible.
 This project grew by the community and is meant to provide people who would like to recreate it with a starting guide.
 
@@ -21,7 +23,7 @@ The base for the wall consists of 8x15 0.5l bottle crates (each crate holding 4x
 The OctoWS2811 supports 8 channels, so in this setup, each row of crates corresponds to one channel.
 
 
-# Hardware
+# Hardware BoM
 
 | Part                                                                          | Cost per Unit | Link | Amount | Total Cost |
 |-------------------------------------------------------------------------------|--------------:|:----:|:------:|-----------:|
