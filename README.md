@@ -48,7 +48,13 @@ The OctoWS2811 supports 8 channels, so in this setup, each row of crates corresp
 Lay out the first 15 crates on the ground and connect each crate to the next. It might be a good idea, to assemble the first row at the final position of the wall, as moving it at the end is kind of tricky.
 Once you are happy with the position of the wall, start with the second row. Attach each crate you add not only with the one next to it but also with the one below. 
 You might need to use two zipties in the front to connect the two layers with eachother.
+
 ![Zip Ties](media/wall_zipties.jpg)
+
+
+## Adding that LED goodness
+
+Once the wall stands, attach the LEDs in the back. Be sure, to mount them correctly as shown in the following image:
 
 
 
