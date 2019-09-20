@@ -76,8 +76,11 @@ https://www.pjrc.com/teensy/td_libs_OctoWS2811.html
 
 
 In the picture above, you see, how one "channel" or row of crates is wired. So per crate-row you will need 6 LED strips with each strip counting 50 LEDs all connected to one big strip as shown in the picture.
+**Do not connect the end of the LED-"snake" to the next crate row!**
+
 
 At the end it should look like this:
+
 <img src="media/led_rows.jpg" width="300"> 
 
 ## Power
@@ -99,8 +102,10 @@ In our case we are using 60[A] power supplies so this works fine and not put too
 
 The power requirements of the LED should not be underestimated! 
 In the current design, each power supply is responsible to power two rows of crates. 
+
 <img src="media/power_groups.jpg"> 
 
+Connect the existing power wires two rows of LED using the wire connectors and from there a speaker cable to the power supply
 
 
 
