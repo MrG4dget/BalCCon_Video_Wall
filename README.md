@@ -62,7 +62,7 @@ You might need to use two zipties in the front to connect the two layers with ea
 
 Once the wall stands, attach the LEDs in the back. Be sure, to mount them correctly as shown in the following image:
 
-<img src="media/LED_layout.jpg" width="300"> 
+<img src="media/LED_layout.jpg"> 
 
 
 In the picture above, you see, how one "channel" or row of crates is wired. So per crate-row you will need 6 LED strips with each strip counting 50 LEDs all connected to one big strip as shown in the picture.
@@ -72,5 +72,21 @@ At the end it should look like this:
 
 <img src="media/led_rows.jpg" width="300"> 
 
+
+## Power 
+
+The power requirements of the LED should not be underestimated! 
+In the current design, each power supply is responsible to power two rows of crates. 
+Some Math:
+
+2* 300 LED/row => 600 LEDs 
+
+Worst case each LED draws 60 [mA] = 0.06[A]
+
+Max current draw:
+
+600 LEDs * 0.06 [A] = 36 [A] Total
+
+In our case we are using 60[A] power supplies so this works fine and not put too much strain on the supplies.
 
 
