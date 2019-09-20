@@ -14,6 +14,7 @@ This BalcCon Video Wall installation was designed with the following priorities 
 
 
 
+
 The following project was the inspiration for the BalcCon Video Wall.
 https://github.com/jaseg/matelight
 
@@ -21,6 +22,8 @@ https://github.com/jaseg/matelight
 
 The base for the wall consists of 8x15 0.5l bottle crates (each crate holding 4x5 bottles). The crates provide stability and if only needed temporarely, might be borrowed or rented at a local beverage supplier. 2400 seperately adressable LEDs (Type WS2811), controlled by a single Teensy 3.2 microcontroller board on a OctoWS2811 adapter.
 The OctoWS2811 supports 8 channels, so in this setup, each row of crates corresponds to one channel.
+
+Please check out: https://www.pjrc.com/teensy/td_libs_OctoWS2811.html
 
 
 # Hardware BoM
@@ -60,7 +63,14 @@ You might need to use two zipties in the front to connect the two layers with ea
 
 ## Adding that LED goodness
 
-Once the wall stands, attach the LEDs in the back. Be sure, to mount them correctly as shown in the following image:
+Once the wall stands, attach the LEDs in the back. They should stay in place by pressing them gently into the holes (given that the crates have one) 
+
+Be sure, to mount them correctly as shown in the following image:
+
+For more information about wiring and layout visit:
+
+https://www.pjrc.com/teensy/td_libs_OctoWS2811.html
+
 
 <img src="media/LED_layout.jpg"> 
 
@@ -72,6 +82,8 @@ At the end it should look like this:
 
 ## Power
 
+**If you do not have any experience in electronics please ask someone to do the wiring for you! 
+Wrong wiring can lead to damage to you and the electronics!** 
 
 Some Math:
 
@@ -88,4 +100,16 @@ In our case we are using 60[A] power supplies so this works fine and not put too
 The power requirements of the LED should not be underestimated! 
 In the current design, each power supply is responsible to power two rows of crates. 
 <img src="media/power_groups.jpg"> 
+
+
+
+
+## Wiring Up the beast
+
+For wiring the teensy board, please check out:
+
+https://www.pjrc.com/store/octo28_adaptor.html
+
+
+
 
