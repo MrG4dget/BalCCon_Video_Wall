@@ -1,5 +1,7 @@
 # BalcCon_Video_Wall
 
+![BalcCon Wall](media/wall_gif.gif)
+
 First built at the BalcCon2k17 conference in Novi Sad, Serbia, this project is meant to be as easy to build as possible.
 This project grew by the community and is meant to provide people who would like to recreate it with a starting guide.
 
@@ -21,7 +23,7 @@ The base for the wall consists of 8x15 0.5l bottle crates (each crate holding 4x
 The OctoWS2811 supports 8 channels, so in this setup, each row of crates corresponds to one channel.
 
 
-# Hardware
+# Hardware BoM
 
 | Part                                                                          | Cost per Unit | Link | Amount | Total Cost |
 |-------------------------------------------------------------------------------|--------------:|:----:|:------:|-----------:|
@@ -37,5 +39,17 @@ The OctoWS2811 supports 8 channels, so in this setup, each row of crates corresp
 | Empty Bottle Crates (4x5) with a center hole!                                 |           N/A |      |   120  |            |
 | Baking Paper 20pcs (white, used as diffusors)                                 |          2.69 | [LINK](https://www.aliexpress.com/item/32965656584.html?spm=a2g0s.8937460.0.0.62c62e0eZ1zAF1) |    6   |      16.14 |
 |                                                                               |               |      |  TOTAL |     993.94 |
+
+
+# Building
+
+## Crate Base
+
+Lay out the first 15 crates on the ground and connect each crate to the next. It might be a good idea, to assemble the first row at the final position of the wall, as moving it at the end is kind of tricky.
+Once you are happy with the position of the wall, start with the second row. Attach each crate you add not only with the one next to it but also with the one below. 
+You might need to use two zipties in the front to connect the two layers with eachother.
+![Zip Ties](media/wall_zipties.jpg)
+
+
 
 
