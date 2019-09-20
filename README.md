@@ -106,8 +106,9 @@ In the current design, each power supply is responsible to power two rows of cra
 <img src="media/power_groups.jpg"> 
 
 Connect the existing power wires two rows of LED using the wire connectors and from there a speaker cable to the power supply
+Where **Red connects to 5[V] and Black to Ground**
 
-
+<img src="media/power_group_wiring.jpg"> 
 
 ## Wiring Up the beast
 
