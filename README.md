@@ -43,6 +43,8 @@ The OctoWS2811 supports 8 channels, so in this setup, each row of crates corresp
 
 # Building
 
+Before you start, check that you got the right crates! This version was built with crates, that have a centric hole at the bottom. This makes mounting the LED a breeze and you wont need any tape or other means of securing the LED! 
+
 ## Crate Base
 
 Lay out the first 15 crates on the ground and connect each crate to the next. It might be a good idea, to assemble the first row at the final position of the wall, as moving it at the end is kind of tricky.
@@ -57,6 +59,7 @@ You might need to use two zipties in the front to connect the two layers with ea
 Once the wall stands, attach the LEDs in the back. Be sure, to mount them correctly as shown in the following image:
 
 ![](media/LED_layout.jpg)
+
 
 
 
