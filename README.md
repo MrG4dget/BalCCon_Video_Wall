@@ -1,12 +1,12 @@
-# BalcCon_Video_Wall
+# BalCCon_Video_Wall
 
-![BalcCon Wall](media/wall_gif.gif)
+![BalCCon Wall](media/wall_gif.gif)
 
-First built at the BalcCon2k17 conference in Novi Sad, Serbia, this project is meant to be as easy to build as possible.
+First built at the BalCCon2k17 conference in Novi Sad, Serbia, this project is meant to be as easy to build as possible.
 This project grew by the community and is meant to provide people who would like to recreate it with a starting guide.
 
 
-This BalcCon Video Wall installation was designed with the following priorities in mind:
+This BalCCon Video Wall installation was designed with the following priorities in mind:
 - Cost effective as possible
 - Minimal use of special equipment (some soldering required)
 - Easy and fast to deploy and dismantle
@@ -15,7 +15,7 @@ This BalcCon Video Wall installation was designed with the following priorities 
 
 
 
-The following project was the inspiration for the BalcCon Video Wall.
+The following project was the inspiration for the BalCCon Video Wall.
 https://github.com/jaseg/matelight
 
 # Overview
