@@ -43,12 +43,13 @@ Please check out: https://www.pjrc.com/teensy/td_libs_OctoWS2811.html
 | Baking Paper 20pcs (white, used as diffusors)                                 |          2.69 | [LINK](https://www.aliexpress.com/item/32965656584.html?spm=a2g0s.8937460.0.0.62c62e0eZ1zAF1) |    6   |      16.14 |
 |                                                                               |               |      |  TOTAL |     993.94 |
 
-
-# Building
-
 Before you start, check that you got the right crates! This version was built with crates, that have a centric hole at the bottom. This makes mounting the LED a breeze and you wont need any tape or other means of securing the LED! 
 
 <img src="media/crate_bottom.jpg" width="300"> 
+
+# Building
+
+
 
 ## Crate Base
 
