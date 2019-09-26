@@ -57,8 +57,11 @@ Lay out the first 15 crates on the ground and connect each crate to the next. It
 Once you are happy with the position of the wall, start with the second row. Attach each crate you add not only with the one next to it but also with the one below. 
 You might need to use two zipties in the front to connect the two layers with eachother.
 
-
 <img src="media/wall_zipties.jpg" width="300"> 
+
+At the end, your wall should look something like this:
+
+<img src="/Users/tomersiani/Desktop/BalCCon_Video_Wall/media/crate_wall.jpg" alt="crate_wall" style="zoom: 25%;" />
 
 
 
@@ -75,7 +78,6 @@ https://www.pjrc.com/teensy/td_libs_OctoWS2811.html
 
 <img src="media/LED_layout.jpg"> 
 
-
 In the picture above, you see, how one "channel" or row of crates is wired. So per crate-row you will need 6 LED strips with each strip counting 50 LEDs all connected to one big strip as shown in the picture.
 **Do not connect the end of the LED-"snake" to the next crate row!**
 
@@ -84,10 +86,9 @@ At the end it should look like this:
 
 <img src="media/led_rows.jpg" width="300"> 
 
-## Power
+## Power 
 
-**If you do not have any experience in electronics please ask someone to do the wiring for you! 
-Wrong wiring can lead to damage to you and the electronics!** 
+**If you do not have any experience in electronics please ask someone to do the wiring for you! Wrong wiring can lead to damage to you and the electronics! **
 
 Some Math:
 
@@ -111,11 +112,31 @@ Where **Red connects to 5[V] and Black to Ground**
 
 <img src="media/power_group_wiring.jpg"> 
 
+
+
+![](/Users/tomersiani/Desktop/BalCCon_Video_Wall/media/power_supply.jpeg)
+
 ## Wiring Up the beast
 
 For wiring the teensy board, please check out:
 
 https://www.pjrc.com/store/octo28_adaptor.html
+
+
+
+
+
+## Where from here?
+
+Program your teensy with your prefered software:
+
+
+
+Examples:
+
+https://github.com/PaulStoffregen/OctoWS2811
+
+
 
 
 
