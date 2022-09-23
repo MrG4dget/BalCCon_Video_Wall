@@ -1,0 +1,123 @@
+<!DOCTYPE doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+        <meta content="" name="description">
+        <meta content="" name="author">
+        <title>Balccon LED Wall</title>
+        <style type="text/css">
+            body {
+              padding-top: 5rem;
+              padding: 3rem 1.5rem;
+              text-align: center;
+            }
+            #myCanvas {
+                width: 750px;
+                height: 320px;
+                image-rendering: -moz-crisp-edges;
+                image-rendering: -webkit-crisp-edges;
+                image-rendering: pixelated;
+                image-rendering: crisp-edges;
+            }
+        </style>
+    </head>
+    <body>
+        <main class="container" role="main">
+            <h1>Video Wall Player</h1>
+            <p>Just Drop your videofile in this window</p>
+            <!-- Canvas is the size of the Videowall -->
+            <canvas id="myCanvas" width="75" height="32" style="border:1px solid #000000;"></canvas>
+        </main>
+    <script>
+
+    //Create Websocket conenction with NodeJS Server that is conencted to teensy (replace localhost with ip if needed)
+    onload=()=>new WebSocket('ws://localhost:8888').onopen=function(){
+        //setup canvas
+        const ctx=document.getElementById("myCanvas").getContext('2d');
+        const next=blob=>{
+            //Create Video element and set it up
+            const video=document.createElement('video');
+            video.src=URL.createObjectURL(blob);
+            video.loop = true;
+            video.onloadedmetadata=()=>video.play();
+
+            //This function gets run every frame
+            setInterval(()=>{
+
+                //Draw next videoframe to canvas
+                ctx.drawImage(video,0,0,75,32);
+                //Put Canvas data in array
+                const pixels=ctx.getImageData(0,0,75,32).data;
+                //Crate empty buffer for the RGB Values (Number of LEDs x4)
+                const buffer=new Uint8Array(9600);
+                
+                buffer[0]=1;
+                var yoff = 1
+
+                //Itterate over every Pixel in canvas
+                for(let y=0;y<32;y++){
+                    for(let x=0;x<75;x++){
+
+                        //Fix offset since some rows are reversed
+                        if(y==0){ty=3}
+                        else if(y==1){ty=2}
+                        else if(y==2){ty=1}
+                        else if(y==3){ty=0}
+                        else if(y==4){ty=7}
+                        else if(y==5){ty=6}
+                        else if(y==6){ty=5}
+                        else if(y==7){ty=4}
+                        else if(y==8){ty=11}
+                        else if(y==9){ty=10}
+                        else if(y==10){ty=9}
+                        else if(y==11){ty=8}
+                        else if(y==12){ty=15}
+                        else if(y==13){ty=14}
+                        else if(y==14){ty=13}
+                        else if(y==15){ty=12}
+                        else if(y==16){ty=19}
+                        else if(y==17){ty=18}
+                        else if(y==18){ty=17}
+                        else if(y==19){ty=16}
+                        else if(y==20){ty=23}
+                        else if(y==21){ty=22}
+                        else if(y==22){ty=21}
+                        else if(y==23){ty=20}
+                        else if(y==24){ty=27}
+                        else if(y==25){ty=26}
+                        else if(y==26){ty=25}
+                        else if(y==27){ty=24}
+                        else if(y==28){ty=31}
+                        else if(y==29){ty=30}
+                        else if(y==30){ty=29}
+                        else if(y==31){ty=28}
+
+                        //Calculate index in Buffer
+                        const i=(y&1?(74-x):x)+(31-y)*75;
+                        //Calculate index in Canvas
+                        const j=x+ty*75;
+                        //Put RGB Values in Buffer
+                        buffer[i*3+2]=pixels[j*4+0]*pixels[j*4+0]>>>8;
+                        buffer[i*3+1]=pixels[j*4+1]*pixels[j*4+1]>>>8;
+                        buffer[i*3+3]=pixels[j*4+2]*pixels[j*4+2]>>>8;
+                    }
+                }
+
+                //Send Buffer to Websocket
+            this.send(buffer);
+            //Runs at 25 FPS (1000ms/25 = 40ms)
+            },40);
+        };
+
+        //Handle Drop of Video
+        ondragover=e=>e.preventDefault();
+        ondrop=e=>{
+            e.preventDefault();
+            next(e.dataTransfer.files[0]);
+        };
+    };
+
+    </script>
+    </body>
+</html>
